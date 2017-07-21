@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="images/bent-creek-logo-coral.png">
+  <title>Bent Creek Ceramics</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body id="newsletter">
+  <div>
+    <nav id="site_header">
+      <a id="logo"><img src="images/bent-creek-logo.png" alt="Creek Logo"></a>
+      <section class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="newsletter.html">NEWSLETTER</a>
+      </section>
+    </nav>
+    <main>
+      <section id="form-sec">
+        <h1>Sign Up for Our Weekly Newsletter</h1>
+        <h2>Stay up to date with events, activities, news and specials.</h2>
+        <form id="form" action="newsletter.html">
+          <input id="nameInput" type="text" name="Name" value="" placeholder="Name">
+          <input id="emailInput" type="text" name="Email" value="" placeholder="Email">
+          <button id="signupButton" type="submit" name="button">Submit</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script type="text/javascript">
+    var nameInput = document.getElementById('nameInput');
+    var emailInput = document.getElementById('emailInput');
+    var signupButton = document.getElementById('signupButton');
+    signupButton.addEventListener('click', function(e) {
+      var nameVal = nameInput.value;
+      var emailVal = emailInput.value;
+      if (nameVal && emailVal) {
+        alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+        nameInput.value = "";
+        emailInput.value = "";
+      } else {
+        alert('We would love for you to sign up, please provide both your name and email address.');
+      }
+    });
+  </script>
+</body>
+
+</html>
